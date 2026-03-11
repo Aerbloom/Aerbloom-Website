@@ -21,7 +21,7 @@ html { scroll-behavior: smooth; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top, var(--hero-glow), transparent 28%),
@@ -46,7 +46,7 @@ body {
 .quote-card footer,
 .breadcrumbs,
 .back-link {
-  font-family: "Manrope", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 
@@ -67,7 +67,7 @@ body {
   margin: 0 0 0.85rem;
 }
 h1, h2, h3, h4 {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Instrument Serif", Georgia, serif;
   line-height: 0.96;
   letter-spacing: -0.015em;
   color: var(--gold-soft);
@@ -98,48 +98,59 @@ li { color: var(--muted); }
   backdrop-filter: blur(18px);
 }
 .header-inner {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 1rem 0 1.05rem;
 }
 .brandmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 0.95rem;
   color: var(--gold-soft);
   font-weight: 600;
   letter-spacing: 0.18em;
+  margin: 0 auto;
 }
 .brandmark span {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Instrument Serif", Georgia, serif;
   text-transform: uppercase;
-  font-size: 1.18rem;
-  font-weight: 600;
+  font-size: 1.48rem;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
 }
 .brandmark img {
-  width: 42px;
-  height: 60px;
+  width: 62px;
+  height: auto;
   object-fit: contain;
+  background: transparent !important;
   filter: drop-shadow(0 0 18px rgba(215, 200, 151, 0.12));
 }
 .nav {
   display: flex;
   align-items: center;
-  gap: 1.15rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.15rem 1.6rem;
 }
 .nav a {
   color: var(--muted);
-  font-size: 0.94rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-size: 0.87rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .nav a:hover { color: var(--gold-soft); }
 .mobile-toggle {
   display: none;
+  position: absolute;
+  top: 0.95rem;
+  right: 0;
   background: transparent;
   border: 1px solid var(--line);
   color: var(--gold-soft);
@@ -181,6 +192,7 @@ li { color: var(--muted); }
   gap: 0.9rem;
   margin-top: 1.8rem;
 }
+.hero-button-row { justify-content: center; }
 
 .hero-home {
   min-height: calc(100vh - 134px);
@@ -201,13 +213,18 @@ li { color: var(--muted); }
   gap: 2rem;
 }
 .hero-home-grid {
-  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
+  text-align: center;
+  gap: 1.8rem;
 }
 .hero-copy .lead {
-  font-size: 1.1rem;
-  line-height: 1.72;
-  max-width: 45rem;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  max-width: 54rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-pills {
   list-style: none;
@@ -215,6 +232,7 @@ li { color: var(--muted); }
   margin: 1.4rem 0 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
 }
 .hero-pills li {
@@ -241,7 +259,7 @@ li { color: var(--muted); }
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
-.image-shell { padding: 1.3rem; }
+.image-shell { padding: 1.3rem; width: 100%; max-width: 960px; }
 .image-shell img { margin: 0 auto; border-radius: 20px; }
 .image-shell.soft {
   background:
@@ -316,7 +334,7 @@ li { color: var(--muted); }
 .metric-card .big {
   font-size: 2.35rem;
   color: var(--gold-soft);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Instrument Serif", Georgia, serif;
   font-weight: 600;
   display: block;
   margin-bottom: 0.35rem;
@@ -433,6 +451,57 @@ li { color: var(--muted); }
   --hero-glow: rgba(160, 177, 118, 0.24);
 }
 
+
+
+.home-page .hero-home {
+  min-height: calc(100vh - 170px);
+  padding-top: 1rem;
+}
+.hero-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+.hero-logo-mark {
+  width: min(170px, 28vw);
+  height: auto;
+  display: block;
+  background: transparent !important;
+  filter: drop-shadow(0 0 28px rgba(215, 200, 151, 0.16));
+}
+.hero-brand {
+  margin: 0;
+  color: var(--gold-soft);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  text-indent: 0.42em;
+}
+.home-page .hero-copy {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.home-page h1 {
+  max-width: 13ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+.hero-image-shell {
+  max-width: 900px;
+}
+.footer-brand img {
+  width: 56px;
+}
+.footer-brand span {
+  font-size: 1.3rem;
+}
+
 @media (max-width: 1100px) {
   .collection-grid { grid-template-columns: repeat(3, 1fr); }
   .hero-home-grid,
@@ -452,6 +521,9 @@ li { color: var(--muted); }
 @media (max-width: 720px) {
   .section { padding: 4rem 0; }
   .mobile-toggle { display: inline-flex; }
+  .collection-grid,
+  .metrics-grid { grid-template-columns: 1fr; }
+  .header-inner { padding-right: 3.5rem; }
   .nav {
     position: absolute;
     top: calc(100% + 1px);
@@ -459,6 +531,7 @@ li { color: var(--muted); }
     right: 1rem;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: 0.9rem;
     display: none;
     padding: 1rem;
@@ -467,8 +540,10 @@ li { color: var(--muted); }
     background: rgba(8, 16, 12, 0.98);
   }
   .nav.open { display: flex; }
-  .collection-grid,
-  .metrics-grid { grid-template-columns: 1fr; }
-  .brandmark span { font-size: 0.95rem; }
+  .brandmark img { width: 50px; }
+  .brandmark span { font-size: 1.08rem; letter-spacing: 0.14em; }
+  .hero-logo-mark { width: min(132px, 34vw); }
+  .hero-brand { font-size: 0.78rem; letter-spacing: 0.32em; text-indent: 0.32em; }
+  .home-page h1 { max-width: 10.5ch; }
   .footer-bottom { flex-direction: column; }
 }
