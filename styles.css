@@ -48,8 +48,9 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 0.85rem;
 }
 h1, h2, h3, h4 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  line-height: 0.98;
+  font-family: "Cinzel", Georgia, serif;
+  line-height: 1.03;
+  letter-spacing: 0.02em;
   color: var(--gold-soft);
   margin: 0 0 1rem;
 }
@@ -89,8 +90,14 @@ li { color: var(--muted); }
   align-items: center;
   gap: 0.8rem;
   color: var(--gold-soft);
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+.brandmark span {
+  font-family: "Cinzel", Georgia, serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
 }
 .brandmark img {
   width: 38px;
@@ -283,7 +290,7 @@ li { color: var(--muted); }
 .metric-card .big {
   font-size: 2.25rem;
   color: var(--gold-soft);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Cinzel", Georgia, serif;
   display: block;
   margin-bottom: 0.35rem;
 }
